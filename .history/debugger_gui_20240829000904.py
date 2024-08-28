@@ -22,14 +22,6 @@ class  DebuggerGUI(QMainWindow){
         central_widget.setLayout(layout);
         self.setCentralWidget(central_widget);
    
-   self.load_button.clicked.connect(self.load_executable);
-    
-     self.run_button.clicked.connect(self.run_program)
-        self.stop_button.clicked.connect(self.stop_program);
-        
-        self.debugger = lldb.SBDebugger.Create();
-        self.debugger.SetAsync(False);
-        self.target = None
-        self.process = None
+   self.load_button.clicked.connect(slef.load_executable)
     }
 }

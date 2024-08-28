@@ -28,8 +28,6 @@ class  DebuggerGUI(QMainWindow){
         self.stop_button.clicked.connect(self.stop_program);
         
         self.debugger = lldb.SBDebugger.Create();
-        self.debugger.SetAsync(False);
-        self.target = None
-        self.process = None
+        
     }
 }

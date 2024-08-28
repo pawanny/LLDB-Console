@@ -29,7 +29,6 @@ class  DebuggerGUI(QMainWindow){
         
         self.debugger = lldb.SBDebugger.Create();
         self.debugger.SetAsync(False);
-        self.target = None
-        self.process = None
+        
     }
 }
