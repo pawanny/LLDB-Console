@@ -20,13 +20,16 @@ class  DebuggerGUI(QMainWindow):
        central_widget=QWidget()
        central_widget.setLayout(layout)
        self.setCentralWidget(central_widget)
-       self.load_button.clicked.connect(self.load_executable)
-       self.run_button.clicked.connect(self.run_program)
-       self.stop_button.clicked.connect(self.stop_program)
-       self.debugger = lldb.SBDebugger.Create()
-       self.debugger.SetAsync(False)
-       self.target = None
-       self.process = None
+   
+   self.load_button.clicked.connect(self.load_executable)
+    
+     self.run_button.clicked.connect(self.run_program)
+        self.stop_button.clicked.connect(self.stop_program)
+        
+        self.debugger = lldb.SBDebugger.Create()
+        self.debugger.SetAsync(False)
+        self.target = None
+        self.process = None
  def log_output(message):
      self.console.append(message)
  
@@ -35,7 +38,7 @@ class  DebuggerGUI(QMainWindow):
      if file_path:
          self.target=self.debugger.CreateTarget(file_path);    
                      self.log_output(f"Loaded executable: {file_path}")
-                     def run_program(self):
+def run_program(self):
     if self.target:
         self.process = self.target.LaunchSimple(None,None,None)
         if self.process.IsValid():

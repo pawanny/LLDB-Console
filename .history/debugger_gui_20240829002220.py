@@ -35,7 +35,7 @@ class  DebuggerGUI(QMainWindow):
      if file_path:
          self.target=self.debugger.CreateTarget(file_path);    
                      self.log_output(f"Loaded executable: {file_path}")
-                     def run_program(self):
+def run_program(self):
     if self.target:
         self.process = self.target.LaunchSimple(None,None,None)
         if self.process.IsValid():
