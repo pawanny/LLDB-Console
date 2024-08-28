@@ -62,5 +62,5 @@ def run_program(self):
                 app= QApplication([])
                 window = DebuggerGUI()
                 window.show()
-                app.exec_()
+                ap
                     

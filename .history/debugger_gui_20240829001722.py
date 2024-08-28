@@ -57,10 +57,3 @@ def run_program(self):
                 self.log_output("program stopped .")
                  else:
             self.log_output("No program running.")
-            
-            if __name__ == '__main__':
-                app= QApplication([])
-                window = DebuggerGUI()
-                window.show()
-                app.exec_()
-                    

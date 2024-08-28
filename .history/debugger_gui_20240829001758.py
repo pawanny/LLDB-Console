@@ -61,6 +61,3 @@ def run_program(self):
             if __name__ == '__main__':
                 app= QApplication([])
                 window = DebuggerGUI()
-                window.show()
-                app.exec_()
-                    

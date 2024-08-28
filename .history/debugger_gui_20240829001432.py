@@ -40,27 +40,4 @@ class  DebuggerGUI(QMainWindow){
          self.target=self.debugger.CreateTarget(file_path);    
                      self.log_output(f"Loaded executable: {file_path}")
 def run_program(self):
-    if self.target:
-        self.process = self.target.LaunchSimple(None,None,None)
-        if self.process.IsValid():
-              self.log_output("Program running.")
-            else:
-                self.log_output("Failed to start program.")
-        else:
-            self.log_output("No executable loaded.")
-            
-            
-            
-            def stop_program(self):
-                if self.process nad self.process.IsValid():
-                self.process.kill()
-                self.log_output("program stopped .")
-                 else:
-            self.log_output("No program running.")
-            
-            if __name__ == '__main__':
-                app= QApplication([])
-                window = DebuggerGUI()
-                window.show()
-                app.exec_()
-                    
+    

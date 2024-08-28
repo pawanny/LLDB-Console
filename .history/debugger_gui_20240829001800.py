@@ -58,9 +58,7 @@ def run_program(self):
                  else:
             self.log_output("No program running.")
             
-            if __name__ == '__main__':
+            if __nwiame__ == '__main__':
                 app= QApplication([])
-                window = DebuggerGUI()
-                window.show()
-                app.exec_()
+                window = DebuggerGUI()\
                     

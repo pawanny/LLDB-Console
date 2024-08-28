@@ -55,12 +55,4 @@ def run_program(self):
                 if self.process nad self.process.IsValid():
                 self.process.kill()
                 self.log_output("program stopped .")
-                 else:
-            self.log_output("No program running.")
-            
-            if __name__ == '__main__':
-                app= QApplication([])
-                window = DebuggerGUI()
-                window.show()
-                app.exec_()
-                    
+                
